@@ -405,7 +405,7 @@ func (this *SearcherLogic) DoSearch(q, field string, start, rows int) (*model.Re
 	return searchResponse.RespBody, nil
 }
 
-// DoSearch 搜索
+// SearchByField: 搜索
 func (this *SearcherLogic) SearchByField(field, value string, start, rows int, sorts ...string) (*model.ResponseBody, error) {
 	selectUrl := this.engineUrl + "/select?"
 

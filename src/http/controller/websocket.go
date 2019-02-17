@@ -27,7 +27,7 @@ func (this *WebsocketController) RegisterRoute(g *echo.Group) {
 	g.GET("/ws", standard.WrapHandler(websocket.Handler(this.Ws)))
 }
 
-// websocket，统计在线用户数
+// Ws: websocket，统计在线用户数
 // uri: /ws
 func (this *WebsocketController) Ws(wsConn *websocket.Conn) {
 	defer wsConn.Close()

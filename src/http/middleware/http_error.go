@@ -15,7 +15,7 @@ import (
 	"github.com/labstack/echo"
 )
 
-// EchoLogger 用于 echo 框架的日志中间件
+// HTTPError: 用于 echo 框架的日志中间件
 func HTTPError() echo.MiddlewareFunc {
 	return func(next echo.HandlerFunc) echo.HandlerFunc {
 		return func(ctx echo.Context) error {

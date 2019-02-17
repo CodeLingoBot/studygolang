@@ -68,7 +68,7 @@ func (IndexController) Index(ctx echo.Context) error {
 	return render(ctx, "index.html", data)
 }
 
-// Index 首页
+// OldIndex: Index 首页
 func (IndexController) OldIndex(ctx echo.Context) error {
 	num := 10
 	paginator := logic.NewPaginatorWithPerPage(1, num)
@@ -178,7 +178,7 @@ func (IndexController) WrapUrl(ctx echo.Context) error {
 	return render(ctx, "wr.html", map[string]interface{}{"url": tUrl})
 }
 
-// PkgdocHandler Go 语言文档中文版
+// Pkgdoc: Pkgdoc Go 语言文档中文版
 func (IndexController) Pkgdoc(ctx echo.Context) error {
 	// return render(ctx, "pkgdoc.html", map[string]interface{}{"activeDoc": "active"})
 	tpl, err := template.ParseFiles(config.TemplateDir + "pkgdoc.html")
